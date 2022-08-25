@@ -1,0 +1,24 @@
+{% extends 'main_app/base.html' %}
+
+{% block content %}
+
+<h1 class="title">Trending Artists</h1>
+<div class="gallery">
+  {% for bills in bills %}
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+              {{bills.name}}
+              {{bills.amount}}
+              {{bills.your_share}}
+            </div>
+          </div>
+        <footer class="card-footer">
+          <a href="/bills" class="card-footer-item">Save</a>
+        </footer>
+      </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
+
