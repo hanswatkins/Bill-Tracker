@@ -18,9 +18,9 @@ class Bills:
         self.your_share = your_share
 
 bills = [
-    Bills("Electricity", "$125", "$50"),
-    Bills("Rent", "$1800", "$900"),
-    Bills("Insurance", "$100", "$40"),
+    Bills("Electricity", "125", "50"),
+    Bills("Rent", "1800", "900"),
+    Bills("Insurance", "100", "40"),
 ]
 
 class BillsList(TemplateView):

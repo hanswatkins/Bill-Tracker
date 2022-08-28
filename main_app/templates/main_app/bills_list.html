@@ -2,23 +2,23 @@
 
 {% block content %}
 
-<h1 class="title">Trending Artists</h1>
-<div class="gallery">
+<h1 class="title">Bills</h1>
+
   {% for bills in bills %}
     <div class="card">
+      <div class="card-header-title">{{bills.name}}</div>
         <div class="card-content">
-            <div class="content">
-              {{bills.name}}
-              {{bills.amount}}
-              {{bills.your_share}}
-            </div>
+              <p>bill total:</p>
+              <b>${{bills.amount}}</b>
+              <p>your share:</p>
+              <b>${{bills.your_share}}</b>
           </div>
         <footer class="card-footer">
           <a href="/bills" class="card-footer-item">Save</a>
         </footer>
       </div>
   {% endfor %}
-</div>
+
 
 {% endblock %}
 
