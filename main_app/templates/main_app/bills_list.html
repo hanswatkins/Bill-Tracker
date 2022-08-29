@@ -4,14 +4,17 @@
 
 <h1 class="title">Bills</h1>
 
+<button class="button is-primary"><a href="/create">Create Bill</a></button>
+
   {% for bills in bills %}
+
     <div class="card">
       <div class="card-header-title">{{bills.name}}</div>
         <div class="card-content">
               <p>bill total:</p>
               <b>${{bills.amount}}</b>
               <p>your share:</p>
-              <b>${{bills.your_share}}</b>
+              <b>${{bills.your_split}}</b>
           </div>
         <footer class="card-footer">
           <a href="/bills" class="card-footer-item">Save</a>

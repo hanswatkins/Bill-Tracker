@@ -26,8 +26,16 @@ from django.urls import reverse
 
 class BillOwner(models.Model):
     name = models.CharField(max_length=100)
+    income = models.IntegerField(default=0)
+    
+    def __str__(self):
+        return self.name
 
 class Bill(models.Model):
+    name = models.CharField(max_length=100, default='Untitled Bill')
     amount = models.IntegerField()
     your_split = models.IntegerField()
     bill_owner = models.ForeignKey(BillOwner, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
