@@ -8,18 +8,23 @@
 
   {% for bills in bills %}
 
-    <div class="card">
-      <div class="card-header-title">{{bills.name}}</div>
-        <div class="card-content">
-              <p>bill total:</p>
-              <b>${{bills.amount}}</b>
-              <p>your share:</p>
-              <b>${{bills.your_split}}</b>
-          </div>
-        <footer class="card-footer">
-          <a href="/bills" class="card-footer-item">Save</a>
-        </footer>
+  <div class="tile is-child box">
+      <div class="card m-5">
+        <header class="card-header">
+        <div class="card-header-title">{{bills.name}}</div>
+        </header>
+          <div class="card-content">
+                <p>bill total:</p>
+                <b>${{bills.amount}}</b>
+                <p>your share:</p>
+                <b>${{bills.your_split}}</b>
+            </div>
+          <!-- <footer class="card-footer">
+            <a href="/bills" class="card-footer-item">Save</a>
+          </footer> -->
+        </div>
       </div>
+
   {% endfor %}
 
 

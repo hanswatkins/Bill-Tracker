@@ -49,8 +49,8 @@ def add_bill(request):
     if form.is_valid():
         new_bill = form.save(commit=False)
         new_bill.save()
-        return redirect('bills')
-        
+        return redirect('bill')
+       
 class BillCreate(CreateView):
     model = Bill
     fields = '__all__'
