@@ -63,22 +63,22 @@ def add_bill(request):
 #     fields = '__all__'
 #     success_url = '/bills/'
 
-class Signup(View):
-    # show a form to fill out
-    def get(self, request):
-        form = UserCreationForm()
-        context = {"form": form}
-        return render(request, "main_app/signup.html", context)
-    # on form ssubmit validate the form and login the user.
-    def post(self, request):
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect("/bills/")
-        else:
-            context = {"form": form}
-            return render(request, "signup.html", context)
+# class Signup(View):
+#     # show a form to fill out
+#     def get(self, request):
+#         form = UserCreationForm()
+#         context = {"form": form}
+#         return render(request, "main_app/signup.html", context)
+#     # on form ssubmit validate the form and login the user.
+#     def post(self, request):
+#         form = UserCreationForm(request.POST)
+#         if form.is_valid():
+#             user = form.save()
+#             login(request, user)
+#             return redirect("/bills/")
+#         else:
+#             context = {"form": form}
+#             return render(request, "signup.html", context)
 
 
 
