@@ -5,12 +5,14 @@
 - One to many relationship: one user can have many bills/purchases.
 
 ## Home page/Main page
+
 - has the main functionality of the app
 - fields to input two people's income
 - field to input the price of the bill
 - two returns showing the amount each person will pay
 
 ## Bills/purchases have
+
 - price
 - name of bill/purchase
 - due date of bill
@@ -18,23 +20,24 @@
 - styled with bulma
 
 ## User Stories
+
 - As a user, I want to be able to easily split bills between my partner and I based on our inputted annual incomes.
 - As a user, I want to be able to keep track of the bills I share with my partner
 - As a user, I want to be able to access the splitting calculator quickly
-- As a user, I want to be able to add new bills to my collection and look through them easily. 
+- As a user, I want to be able to add new bills to my collection and look through them easily.
 
 ## Models
+
 ### User
-  - properties
-    - name
-    - income  
-    - (mutiple) bills
+
+- properties
+  - name
+  - income
+  - (mutiple) bills
 
 ### Bill
-  - properties
-    - user it belongs to
-    - amount
-    - due date
 
-
-
+- properties
+  - user it belongs to
+  - amount
+  - due date
