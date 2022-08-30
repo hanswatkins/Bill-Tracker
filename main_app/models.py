@@ -29,7 +29,7 @@ class BillOwner(models.Model):
     income = models.IntegerField(default=0)
     
     def __str__(self):
-        return f'{self.name}, ({self.id})'
+        return f'{self.name}'
 
     def get_absolute_url(self):
         return reverse('add_bill', kwargs={'bill_owner_id' : self.id})

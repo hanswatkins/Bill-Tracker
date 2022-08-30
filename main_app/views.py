@@ -49,12 +49,12 @@ def add_bill(request):
     if form.is_valid():
         new_bill = form.save(commit=False)
         new_bill.save()
-        return redirect('bill')
+        return redirect('/bills/')
        
-class BillCreate(CreateView):
-    model = Bill
-    fields = '__all__'
-    success_url = '/bills/'
+# class BillCreate(CreateView):
+#     model = Bill
+#     fields = '__all__'
+#     success_url = '/bills/'
 
 
 

@@ -1,32 +1,30 @@
-{% extends 'main_app/base.html' %}
-
-{% block content %}
+{% extends 'main_app/base.html' %} {% block content %}
 
 <h1 class="title">Bills</h1>
 
-<button class="button is-primary"><a href="/create">Create Bill</a></button>
+<div class="buttons">
+  <a class="button is-primary" href="/create">
+    <strong>Create Bill</strong>
+  </a>
+</div>
 
-  {% for bills in bills %}
+{% for bills in bills %}
 
-  <div class="tile is-child box">
-      <div class="card m-5">
-        <header class="card-header">
-        <div class="card-header-title">{{bills.name}}</div>
-        </header>
-          <div class="card-content">
-                <p>bill total:</p>
-                <b>${{bills.amount}}</b>
-                <p>your share:</p>
-                <b>${{bills.your_split}}</b>
-            </div>
-          <!-- <footer class="card-footer">
+<div class="tile is-child box">
+  <div class="card m-3">
+    <header class="card-header">
+      <div class="card-header-title">{{bills.name}}</div>
+    </header>
+    <div class="card-content">
+      <p class="mb-2">Bill Total: ${{bills.amount}}</p>
+      <b></b>
+      <p class="mb-2">{{bills.bill_owner}} owes: ${{bills.your_split}}</p>
+      <b></b>
+    </div>
+    <!-- <footer class="card-footer">
             <a href="/bills" class="card-footer-item">Save</a>
           </footer> -->
-        </div>
-      </div>
+  </div>
+</div>
 
-  {% endfor %}
-
-
-{% endblock %}
-
+{% endfor %} {% endblock %}
