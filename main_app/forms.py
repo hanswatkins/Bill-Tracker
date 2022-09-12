@@ -4,4 +4,4 @@ from .models import Bill
 class NewBillForm(ModelForm):
     class Meta:
         model = Bill
-        fields = ['name', 'amount', 'your_split', 'bill_owner']
+        fields = ['name', 'amount', 'your_split', 'bill_owner', 'payment_link']

@@ -39,6 +39,7 @@ class Bill(models.Model):
     amount = models.IntegerField()
     your_split = models.IntegerField()
     bill_owner = models.ForeignKey(BillOwner, on_delete=models.CASCADE)
+    payment_link = models.CharField(max_length=100, default='')
 
     def __str__(self):
         return self.name
