@@ -20,13 +20,13 @@
       <b></b>
       <p class="mb-2">{{bills.bill_owner}} owes: ${{bills.your_split}}</p>
       <b></b>
-      <p class="mb-2">Payment Link: {{bills.payment_link}}</p>
+      <p class="mb-2">
+        Payment Link:
+        <a href="{{bills.payment_link}}">{{bills.payment_link}}</a>
+      </p>
       <b></b>
       <div class="card-action"></div>
     </div>
-    <!-- <footer class="card-footer">
-            <a href="/bills" class="card-footer-item">Save</a>
-          </footer> -->
   </div>
 </div>
 
